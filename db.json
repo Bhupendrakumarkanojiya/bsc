@@ -1,0 +1,77 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "comments1": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "employees": [
+    {
+      "id":1,
+      "fullName": "Bhupendra",
+      "email": "bhupendrakanojiya@gmail.com",
+      "phone": "8149265345",
+      "skills": [
+        {
+          "skillname":"PHP",
+          "experienceInYear": 11,
+          "proficiency": "beginner"
+      }] 
+  }
+],
+  "results": [
+  {
+      "month": "Jan",
+      "price": "180"
+  },
+  {
+    "month": "Feb",
+    "price": "200"
+  },
+  {
+    "month": "March",
+    "price": "210"
+  },
+  {
+    "month": "April",
+    "price": "190"
+  },
+  {
+    "month": "May",
+    "price": "240"
+  },
+  {
+    "month": "June",
+    "price": "230"
+  },
+  {
+    "month": "July",
+    "price": "260"
+  },
+  {
+    "month": "Aug",
+    "price": "210"
+  },
+  {
+    "month": "Sept",
+    "price": "300"
+  }],
+  "profile": {
+    "name": "typicode"
+  }
+}

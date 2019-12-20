@@ -1,0 +1,86 @@
+<!-- <h1>Users</h1>
+<form [formGroup] = "employeeForm" (ngSubmit)="onSubmit()">
+  <div class="form-group" [ngClass]="{'text-danger': employeeForm.get('fullName').errors && (employeeForm.get('fullName').touched || employeeForm.get('fullName').dirty)}">
+    <label for="fullName">Full Name</label>
+    <div class="col-sm-8">
+      <input id="fullName" formControlName="fullName" class="form-control " type="text" placeholder="Name">
+    </div>
+    <span>{{ fullNameLength }}</span>
+    <span class = 'help-block'>
+      <span *ngIf = "employeeForm.get('fullName').errors">
+        Full Name is required
+      </span>
+  </span>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email</label>
+    <input id="email" formControlName="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="well">
+  <button type="button" class="btn btn-primary" (click)= "addSkillButtonClick()" [disabled] = "employeeForm.get('skills').invalid">Add Skills</button>
+  <div formArrayName = "skills" *ngFor='let skill of employeeForm.get("skills").controls; let i = index'>
+    <div [formGroupName] = "i">
+    <div class="form-group" [ngClass]="{'text-danger': skill.get('skillName').invalid && skill.get('skillName').touched}">
+      <label class="col-sm-2 control-label" [attr.for]="'skillName'+i">Skill Name</label>
+      <input  class="form-control" id="{{'skillName'+i}}" formControlName="skillName" type="text" placeholder="Skill Name">
+    </div>
+    <div class="form-group" [ngClass]="{'text-danger': skill.get('experienceInYear').invalid && skill.get('experienceInYear').touched}">
+      <label class="col-sm-2 control-label" [attr.for]="'experienceInYear'+i">Experience</label>
+      <input class="form-control"  type="text" id="{{'experienceInYear'+i}}" formControlName="experienceInYear" placeholder="Experience in years">
+    </div>
+    <div class="form-group" [ngClass]="{'text-danger': skill.get('proficiency').invalid && skill.get('proficiency').touched}">
+
+    <label class="col-sm-2 control-label">Proficiency</label>
+      <div class="col-sm-4" >
+        <input formControlName="proficiency" type="radio" value="beginner" >
+        <input formControlName="proficiency" type="radio" value="intermediate" >
+        <input formControlName="proficiency" type="radio" value="advanced" >
+      </div>
+    
+ 
+  <div class="col-sm-6 form-group" *ngIf="employeeForm.get('skills').length > 1">
+    <button (click)="removeSkillButtonClick(i)" type="button" class="btn btn-danger btn-sm pull-right" title="Delete Skill">
+      <span class="glyphicon glyphicon-remove">Remove</span>
+    </button>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+  <div class='btn-toolbar'>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-primary" (click)="onLoadDataClick()">Load Data</button>
+
+  </div>
+  
+</form>
+
+<div class="container">
+  <h2>Stats</h2>
+   <table class="table table-dark">
+    <thead>
+      <tr>
+        <th>FormGroup</th>
+        <th>FormControl</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          touched: {{ employeeForm.touched }}
+          <br> Dirty : {{ employeeForm.dirty }}
+          <br> valid : {{ employeeForm.valid }}
+          <br> Form Values : {{ employeeForm.value | json}}
+
+        </td>
+        <td> touched: {{ employeeForm.get("fullName").touched }}
+          <br> Dirty : {{ employeeForm.get("fullName").dirty }}
+          <br> valid : {{ employeeForm.get("fullName").valid }}
+         
+        
+      </tr>
+      
+    </tbody>
+  </table>
+</div> -->

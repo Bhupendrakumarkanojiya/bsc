@@ -1,0 +1,14 @@
+<button class="btn btn-primary">Test it</button>
+<ul>
+    <li *ngFor = 'let detail of details'>
+       <div *ngIf = "detail.email=='Shanna@melissa.tv' else elsepart;"> Extra : {{ detail.email }} </div>
+       <ng-template #elsepart>
+            <div *ngIf="detail.email=='Sincere@april.biz' else elselast;"> Telly and belly : {{ detail.email }} </div>
+       </ng-template>
+       <ng-template #elselast>
+            <div >
+                <a> {{ detail.email }} </a> </div>
+       </ng-template>
+    </li>
+</ul>
+
